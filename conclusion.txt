@@ -1,0 +1,10 @@
+Conclusión sobre el tamaño de batch para inserción en MongoDB:
+Después de realizar pruebas con distintos tamaños de batch (500, 1000, 2000 y 5000 registros por inserción)
+se concluye que un batch de 500 registros ofrece el mejor balance entre rendimiento y consumo de recursos.
+Este tamaño permite mantener tiempos de procesamiento bajos (~53 segundos para 1.000.000 registros)
+evitando picos altos de memoria que podrían ocurrir con batches más grandes, y facilitando una inserción más estable y escalable para archivos aún mayores.
+Por estas razones, se recomienda utilizar un batch size de 500 para optimizar performance, estabilidad
+y escalabilidad del proceso.
+
+Para iniciar el servidor, ejecutar en la consola: npm start
+(se inicia con nodemon, vi que estaba instalada y decidi utilizarlo)
